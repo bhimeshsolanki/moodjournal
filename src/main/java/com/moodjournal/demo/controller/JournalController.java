@@ -11,7 +11,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/journal")
-@CrossOrigin(origins = "*") // Allow React frontend to call this
+@CrossOrigin(origins = "${app.cors.allowed-origins}")
 public class JournalController {
 
     private final JournalRepository repository;
